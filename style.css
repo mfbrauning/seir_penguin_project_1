@@ -1,26 +1,26 @@
 body {
     background-color: #e0e0e4;
 }
+@media only screen and (min-width: 375px) {
 
-/* Heading */
-
+/* HEADING */
 h1 {
-    text-align: center;
-    color: black;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 800;
-    font-size: 50px;
-    margin-bottom: 20px;
+        text-align: center;
+        color: black;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 800;
+        font-size: 35px;
+        margin-bottom: 20px;
 }
 
 /* Question */
 
 #question {
-    width: 40%;
+    width: 60%;
     padding: 30px;
     background-color: white;
     color: black;
-    font-size: 25px;
+    font-size: 16px;
     margin: 10px auto;
     font-family: 'Libre Baskerville', serif;
     border-radius: 1px;
@@ -31,7 +31,7 @@ h1 {
 /* Answers */
 
 #answer {
-    width: 40%;
+    width: 60%;
     margin: 10px auto;
     color: black;
     background-color: white;
@@ -55,10 +55,11 @@ h1 {
 }
 
 #answer ul li {
-    width: 50%;
-    height: 40px;
+    width: 70%;
+    height: 25px;
     background-color: #aeb110;
-    padding-top: 15px;
+    padding: 25px 20px 15px 20px;
+    font-size: 15px;
     text-align: center;
     margin: 5px;
     font-weight: bolder;
@@ -66,14 +67,16 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+
 /* Scoreboard */
 
 #scores {
     display: flex;
-    width: 40%;
+    width: 60%;
     padding: 30px;
     background-color: white;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 10px auto;
     font-family: 'Libre Baskerville', serif;
     border-radius: 1px;
@@ -83,7 +86,7 @@ h1 {
 }
 
 #player1, #player2 { 
-    width: 40%;
+    width: 60%;
     background-color: #507ac9;
     margin: 5px;
     text-align: center;
@@ -92,4 +95,32 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* #eeb752 */
+
+
+}
+
+
+@media only screen and (min-width: 769px) {
+
+#answer ul li:hover{
+    background-color: #507ac9;
+}
+
+#question {
+    width: 30%;
+    
+}
+
+#answer {
+    width: 30%;
+}
+
+#scores {
+    width: 30%;
+}
+
+}
+
+
+
+
