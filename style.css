@@ -67,7 +67,22 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* new question */
 
+#new {
+    width: 60%;
+    margin: 10px auto;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 1px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* Scoreboard */
 
@@ -116,6 +131,10 @@ h1 {
 }
 
 #scores {
+    width: 30%;
+}
+
+#new {
     width: 30%;
 }
 
