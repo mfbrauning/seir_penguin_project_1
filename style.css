@@ -1,33 +1,48 @@
+body {
+    background-color: #e0e0e4;
+}
+
 /* Heading */
 
 h1 {
     text-align: center;
-    color: royalblue;
+    color: black;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
 /* Question */
 
 #question {
-    width: 70%;
+    width: 40%;
     padding: 30px;
-    border: 3px solid blue;
-    background-color: royalblue;
-    color: white;
-    font-size: 28px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
     margin: 10px auto;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 1px;
+    font-weight: 800;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Answers */
 
 #answer {
-    width: 50%;
+    width: 40%;
     margin: 10px auto;
-    color: white;
-    background-color: red;
+    color: black;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 1px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #answer ul {
@@ -36,32 +51,45 @@ h1 {
     justify-content: space-around;
     list-style: none;
     width: 100%;
+    padding: 0;
 }
 
 #answer ul li {
-    width: 40%;
+    width: 50%;
     height: 40px;
-    background-color: black;
+    background-color: #aeb110;
     padding-top: 15px;
     text-align: center;
     margin: 5px;
     font-weight: bolder;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Scoreboard */
 
 #scores {
     display: flex;
-    width: 70%;
-    background-color: darkslategray;
+    width: 40%;
+    padding: 30px;
+    background-color: white;
     justify-content: center;
     margin: 10px auto;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 
 }
 
-#player1, #player2 {
+#player1, #player2 { 
     width: 40%;
-    background-color: darkgoldenrod;
+    background-color: #507ac9;
     margin: 5px;
     text-align: center;
+    border-radius: 1px;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+/* #eeb752 */
