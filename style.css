@@ -84,6 +84,26 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#next, #reset {
+    width: 70%;
+    height: 25px;
+    padding: 25px 20px 15px 20px;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px;
+    font-weight: bolder;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#next {
+    background-color: rgb(235, 70, 11);
+}
+
+#reset {
+    background-color: rgb(146, 145, 140);
+}
+
 /* Scoreboard */
 
 #scores {

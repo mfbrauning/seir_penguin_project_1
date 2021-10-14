@@ -5,7 +5,8 @@ const state = {
     player1: 0,
     player2: 0,
     currentQuestion: {},
-    which: true
+    whichPlayer: true
+
 }
 
 let questions = []
@@ -24,6 +25,7 @@ const $p2score = $("#player2 h4")
 
 
 
+
 // ******************
 // Functions
 // ****************** 
@@ -36,13 +38,13 @@ const chooseAnswer = (event, question) => {
     if (event.target.innerText === question.correctAnswer){
         console.log("correct")
         $(event.delegateTarget).css("background-color", "green").text("Correct!");
-
-        if (state.which) {
+        if (state.whichPlayer) { 
             state.player1 ++
-            state.which = !state.which
+            state.whichPlayer = !state.whichPlayer
         } else {
             state.player2 ++
-            state.which = !state.which
+            state.whichPlayer = !state.whichPlayer
+
         }
         // setBoard(questions)
         // update players' scores
@@ -55,15 +57,15 @@ const chooseAnswer = (event, question) => {
         state.which = !state.which
         // update players' scores
         $p1score.text(state.player1) 
-        $p2score.text(state.player2)
-        
+        $p2score.text(state.player2)    
     } 
 }
 
 const nextQuestion = () => {
-    $("#new").off()
-    $("#new").on("click", (event) => {
+    $("#next").off()
+    $("#next").on("click", (event) => {
         console.log("clicked")
+        state.whichPlayer = !state.whichPlayer
         setBoard(questions)
     
     } )
@@ -86,6 +88,19 @@ const setBoard = (q) => {
     // $p2score.text(state.player2) 
 
     nextQuestion()
+
+    if (state.whichPlayer === true) {
+        $("#player1 h3").css("color","white"),
+        $("#player2 h3").css("color", "black"),
+        $("#player1 h3").css("font-size", "22px")
+        $("#player2 h3").css("font-size", "18px")
+
+    }  else {
+        $("#player1 h3").css("color", "black"),
+        $("#player2 h3").css("color", "white")
+        $("#player2 h3").css("font-size", "22px")
+        $("#player1 h3").css("font-size", "18px")
+    }
 
     $("li").off()
 
@@ -130,8 +145,8 @@ const URL= "https://cdn.contentful.com/spaces/kaxsjzwpr82l/environments/master/e
 // ************************
 
 // show whose turn it is
-// show if question is right or wrong
-// next question button
+// show if question is right or wrong [x]
+// next question button [x]
 // make it so questions aren't repeated
 // reset button
 // show winner
