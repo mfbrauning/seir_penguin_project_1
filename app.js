@@ -5,7 +5,7 @@ const state = {
     player1: 0,
     player2: 0,
     currentQuestion: {},
-    whichPlayer: true
+    whichPlayer: true,
 
 }
 
@@ -56,6 +56,7 @@ const chooseAnswer = (event, question) => {
         $p1score.text(state.player1) 
         $p2score.text(state.player2)    
     } 
+    winningConditions()
 }
 
 const nextQuestion = () => {
@@ -69,17 +70,30 @@ const nextQuestion = () => {
     
 }
 
-const reset = () => {
-    $("#reset").off()
-    $("#reset").on("click", (event) => {
-        setBoard(questions)
-        
+    
 
-    })
+const winningConditions = () => {
+    if (state.player1 >= 10){
+        $question.text("Game Over!").css({"background-color":"#507ac9", "text-align": "center"})
+        $a.remove()
+        $b.remove()
+        $c.remove()
+        $d.remove()
+        $("ul").remove()
+        $playerWins = $("<div>").addClass("wins").text("Player 1 Wins!")
+        $("#answer").append($playerWins)
+        // state.quit = true
+    } else if (state.player2 >= 10){
+        $question.text("Game Over!").css({"background-color":"#507ac9", "text-align": "center"})
+        $a.remove()
+        $b.remove()
+        $c.remove()
+        $d.remove()
+        $("ul").remove()
+        $playerWins = $("<div>").addClass("wins").text("Player 2 Wins!")
+        $("#answer").append($playerWins)
+    }
 }
-
-reset()
-
 
 const setBoard = (q) => {
     // Getting a random question
@@ -91,6 +105,7 @@ const setBoard = (q) => {
     $b.text(randomQuestion.answerB).css("background-color", "#aeb110")
     $c.text(randomQuestion.answerC).css("background-color", "#aeb110") 
     $d.text(randomQuestion.answerD).css("background-color", "#aeb110") 
+    
     
 
     nextQuestion()
@@ -112,8 +127,32 @@ const setBoard = (q) => {
 
     $("li").on("click", (event) => {
         chooseAnswer(event, randomQuestion);    
-    });   
+    }); 
+    
+   
+
+   
+        
 }
+
+
+
+
+ 
+
+    
+
+
+
+
+    
+    
+
+
+
+
+
+
 
 
 
