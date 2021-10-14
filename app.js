@@ -89,18 +89,18 @@ const setBoard = (q) => {
 
     nextQuestion()
 
-    if (state.whichPlayer === true) {
-        $("#player1 h3").css("color","white"),
-        $("#player2 h3").css("color", "black"),
-        $("#player1 h3").css("font-size", "22px")
-        $("#player2 h3").css("font-size", "18px")
+    // if (state.whichPlayer === true) {
+    //     $("#player1 h3").css("color","white"),
+    //     $("#player2 h3").css("color", "black"),
+    //     $("#player1 h3").css("font-size", "22px")
+    //     $("#player2 h3").css("font-size", "18px")
 
-    }  else {
-        $("#player1 h3").css("color", "black"),
-        $("#player2 h3").css("color", "white")
-        $("#player2 h3").css("font-size", "22px")
-        $("#player1 h3").css("font-size", "18px")
-    }
+    // }  else {
+    //     $("#player1 h3").css("color", "black"),
+    //     $("#player2 h3").css("color", "white")
+    //     $("#player2 h3").css("font-size", "22px")
+    //     $("#player1 h3").css("font-size", "18px")
+    // }
 
     $("li").off()
 
