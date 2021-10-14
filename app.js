@@ -40,11 +40,10 @@ const chooseAnswer = (event, question) => {
         $(event.delegateTarget).css("background-color", "green").text("Correct!");
         if (state.whichPlayer) { 
             state.player1 ++
-            state.whichPlayer = !state.whichPlayer
+            // state.whichPlayer = !state.whichPlayer
         } else {
             state.player2 ++
-            state.whichPlayer = !state.whichPlayer
-
+            // state.whichPlayer = !state.whichPlayer
         }
         // setBoard(questions)
         // update players' scores
@@ -54,7 +53,7 @@ const chooseAnswer = (event, question) => {
         $(event.delegateTarget).css("background-color", "red").text("Wrong!")
         console.log("incorrect")
         // setBoard(questions)
-        state.which = !state.which
+        // state.whichPlayer = !state.whichPlayer
         // update players' scores
         $p1score.text(state.player1) 
         $p2score.text(state.player2)    
@@ -89,18 +88,18 @@ const setBoard = (q) => {
 
     nextQuestion()
 
-    // if (state.whichPlayer === true) {
-    //     $("#player1 h3").css("color","white"),
-    //     $("#player2 h3").css("color", "black"),
-    //     $("#player1 h3").css("font-size", "22px")
-    //     $("#player2 h3").css("font-size", "18px")
+    if (state.whichPlayer === true) {
+        $("#player1 h3").css("color","white"),
+        $("#player2 h3").css("color", "black"),
+        $("#player1 h3").css("font-size", "22px")
+        $("#player2 h3").css("font-size", "18px")
 
-    // }  else {
-    //     $("#player1 h3").css("color", "black"),
-    //     $("#player2 h3").css("color", "white")
-    //     $("#player2 h3").css("font-size", "22px")
-    //     $("#player1 h3").css("font-size", "18px")
-    // }
+    }  else {
+        $("#player1 h3").css("color", "black"),
+        $("#player2 h3").css("color", "white")
+        $("#player2 h3").css("font-size", "22px")
+        $("#player1 h3").css("font-size", "18px")
+    }
 
     $("li").off()
 
