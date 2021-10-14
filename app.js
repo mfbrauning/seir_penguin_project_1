@@ -6,7 +6,6 @@ const state = {
     player2: 0,
     currentQuestion: {},
     whichPlayer: true,
-
 }
 
 let questions = []
@@ -35,7 +34,7 @@ const $p2score = $("#player2 h4")
 
 const chooseAnswer = (event, question) => {
     if (event.target.innerText === question.correctAnswer){
-        $(event.delegateTarget).css("background-color", "green").text("Correct!");
+        $(event.delegateTarget).css("background-color", "#C2E03A").text("Correct!");
         if (state.whichPlayer) { 
             state.player1 ++
             // state.whichPlayer = !state.whichPlayer
@@ -48,7 +47,7 @@ const chooseAnswer = (event, question) => {
         $p1score.text(state.player1) 
         $p2score.text(state.player2)
     } else { 
-        $(event.delegateTarget).css("background-color", "red").text("Wrong!")
+        $(event.delegateTarget).css("background-color", "#E03320").text("Wrong!")
         console.log("incorrect")
         // setBoard(questions)
         // state.whichPlayer = !state.whichPlayer
@@ -70,11 +69,9 @@ const nextQuestion = () => {
     
 }
 
-    
-
 const winningConditions = () => {
     if (state.player1 >= 10){
-        $question.text("Game Over!").css({"background-color":"#507ac9", "text-align": "center"})
+        $question.text("Game Over!").css({"background-color":"#ffd166", "text-align": "center"})
         $a.remove()
         $b.remove()
         $c.remove()
@@ -84,7 +81,7 @@ const winningConditions = () => {
         $("#answer").append($playerWins)
         // state.quit = true
     } else if (state.player2 >= 10){
-        $question.text("Game Over!").css({"background-color":"#507ac9", "text-align": "center"})
+        $question.text("Game Over!").css({"background-color":"#ffd166", "text-align": "center"})
         $a.remove()
         $b.remove()
         $c.remove()

@@ -1,6 +1,8 @@
 body {
     background-color: #e0e0e4;
 }
+
+
 @media only screen and (min-width: 375px) {
 
 /* HEADING */
@@ -69,6 +71,8 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+
 /* new question */
 
 #new {
@@ -99,7 +103,7 @@ h1 {
 }
 
 #next {
-    background-color: rgb(235, 70, 11);
+    background-color: #ff8e25;
 }
 
 #reset {
@@ -148,11 +152,10 @@ h1 {
 }
 
 
+
 @media only screen and (min-width: 769px) {
 
-#answer ul li:hover{
-    background-color: #507ac9;
-}
+
 
 #question {
     width: 30%;
@@ -162,6 +165,8 @@ h1 {
 #answer {
     width: 30%;
 }
+
+
 
 #scores {
     width: 30%;
@@ -176,7 +181,10 @@ h1 {
     padding: 20px 0 0 
 }
 
+
+
 }
+
 
 
 
