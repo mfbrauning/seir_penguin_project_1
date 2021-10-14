@@ -34,9 +34,7 @@ const $p2score = $("#player2 h4")
 
 
 const chooseAnswer = (event, question) => {
-    console.log(event)
     if (event.target.innerText === question.correctAnswer){
-        console.log("correct")
         $(event.delegateTarget).css("background-color", "green").text("Correct!");
         if (state.whichPlayer) { 
             state.player1 ++
@@ -71,6 +69,17 @@ const nextQuestion = () => {
     
 }
 
+const reset = () => {
+    $("#reset").off()
+    $("#reset").on("click", (event) => {
+        setBoard(questions)
+        
+
+    })
+}
+
+reset()
+
 
 const setBoard = (q) => {
     // Getting a random question
@@ -82,9 +91,7 @@ const setBoard = (q) => {
     $b.text(randomQuestion.answerB).css("background-color", "#aeb110")
     $c.text(randomQuestion.answerC).css("background-color", "#aeb110") 
     $d.text(randomQuestion.answerD).css("background-color", "#aeb110") 
-    // update players' scores
-    // $p1score.text(state.player1) 
-    // $p2score.text(state.player2) 
+    
 
     nextQuestion()
 

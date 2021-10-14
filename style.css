@@ -9,7 +9,7 @@ h1 {
         color: black;
         font-family: 'Libre Baskerville', serif;
         font-weight: 800;
-        font-size: 35px;
+        font-size: 30px;
         margin-bottom: 20px;
 }
 
@@ -17,6 +17,7 @@ h1 {
 
 #question {
     width: 60%;
+    /* height: 40px; */
     padding: 30px;
     background-color: white;
     color: black;
@@ -32,6 +33,7 @@ h1 {
 
 #answer {
     width: 60%;
+    height: 300px;
     margin: 10px auto;
     color: black;
     background-color: white;
@@ -86,8 +88,8 @@ h1 {
 
 #next, #reset {
     width: 70%;
-    height: 25px;
-    padding: 25px 20px 15px 20px;
+    height: 5px;
+    padding: 10px 20px 20px 20px;
     font-size: 15px;
     text-align: center;
     margin: 5px;
@@ -156,6 +158,11 @@ h1 {
 
 #new {
     width: 30%;
+}
+
+#next, #reset {
+    height: 40px;
+    padding: 20px 0 0 
 }
 
 }
