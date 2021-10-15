@@ -75,19 +75,27 @@ const nextQuestion = () => {
 const reset = () => {
     $("#reset").off()
     $("#reset").on("click", (event) => {
-        // alert("are you sure?")
-        console.log("reset clicked")
         state.whichPlayer = true
-        console.log(state.whichPlayer)
         state.player1 = 0
         state.player2 = 0
         $("#player1 h3").css("color","white"),
         $("#player2 h3").css("color", "black"),
         $("#player1 h3").css("font-size", "22px")
         $("#player2 h3").css("font-size", "18px")
+        $question.css({"background-color":"white", "text-align": "left"})
         $p1score.text(state.player1) 
         $p2score.text(state.player2)
+        if (winningConditions()) {
+            $(".wins").remove()
+            $("ul").append($a)
+            $("ul").append($b)
+            $("ul").append($c)
+            $("ul").append($d)
+            $("#answer").append($("ul"))
+            console.log($a)
+        }
         setBoard(questions)
+
 
     })
 }
@@ -97,7 +105,7 @@ reset()
 
 const winningConditions = () => {
     if (state.player1 >= 10){
-        $question.text("Game Over!").css({"background-color":"#ffd166", "text-align": "center"})
+        $question.text("Game Over!").css({"background-color":"#ff8e25", "text-align": "center"})
         $a.remove()
         $b.remove()
         $c.remove()
@@ -105,9 +113,8 @@ const winningConditions = () => {
         $("ul").remove()
         $playerWins = $("<div>").addClass("wins").text("Player 1 Wins!")
         $("#answer").append($playerWins)
-        // state.quit = true
     } else if (state.player2 >= 10){
-        $question.text("Game Over!").css({"background-color":"#ffd166", "text-align": "center"})
+        $question.text("Game Over!").css({"background-color":"#ff8e25", "text-align": "center"})
         $a.remove()
         $b.remove()
         $c.remove()
@@ -116,6 +123,8 @@ const winningConditions = () => {
         $playerWins = $("<div>").addClass("wins").text("Player 2 Wins!")
         $("#answer").append($playerWins)
     }
+    reset()
+
 }
 
 const setBoard = (q) => {
@@ -157,7 +166,7 @@ const setBoard = (q) => {
     $("li").off()
 
     $("li").on("click", (event) => {
-        chooseAnswer(event, randomQuestion);    
+        chooseAnswer(event, randomQuestion); 
     }); 
     
 }
