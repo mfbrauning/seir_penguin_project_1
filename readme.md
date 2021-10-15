@@ -15,10 +15,8 @@ For my Unit 1 project I created a trivia quiz about colors and color theory. It 
     + If it is player 1's turn, player 1 text changes to a larger font and different color to indicate player 1's turn, and vice versa.
 * Reset button
     + allows for game to be reset
-* Questions are not repeated throughout the game
 * Game alerts when a player has won
-    + game continues until all questions have been asked and answered.
-    + once that is done, the winner is announced.
+    + If a player reaches 10 points, page will alert who won.
 
 
 ## Technologies Used

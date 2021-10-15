@@ -138,9 +138,10 @@ h1 {
  
 .wins {
     width: 70%;
+    
     background-color: #aeb110;
-    padding: 25px 20px 15px 20px;
-    font-size: 15px;
+    padding: 100px 20px 100px 20px;
+    font-size: 22px;
     text-align: center;
     margin: auto;
     font-weight: bolder;

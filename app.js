@@ -10,6 +10,8 @@ const state = {
 
 let questions = []
 
+let usedQ = []
+
 // *****************
 // Main DOM Elements
 // *****************
@@ -69,6 +71,30 @@ const nextQuestion = () => {
     
 }
 
+
+const reset = () => {
+    $("#reset").off()
+    $("#reset").on("click", (event) => {
+        // alert("are you sure?")
+        console.log("reset clicked")
+        state.whichPlayer = true
+        console.log(state.whichPlayer)
+        state.player1 = 0
+        state.player2 = 0
+        $("#player1 h3").css("color","white"),
+        $("#player2 h3").css("color", "black"),
+        $("#player1 h3").css("font-size", "22px")
+        $("#player2 h3").css("font-size", "18px")
+        $p1score.text(state.player1) 
+        $p2score.text(state.player2)
+        setBoard(questions)
+
+    })
+}
+
+reset()
+
+
 const winningConditions = () => {
     if (state.player1 >= 10){
         $question.text("Game Over!").css({"background-color":"#ffd166", "text-align": "center"})
@@ -96,7 +122,15 @@ const setBoard = (q) => {
     // Getting a random question
     const randomIndex = Math.floor(Math.random() * q.length)
     const randomQuestion = q[randomIndex]
+    // usedQ 
     // update the question
+    // if (usedQ === randomQuestion.question) {
+    //     setBoard()
+    // } else 
+    // usedQ = randomQuestion.question
+
+    // console.log(usedQ)
+    
     $question.text(randomQuestion.question) 
     $a.text(randomQuestion.answerA).css("background-color", "#aeb110") 
     $b.text(randomQuestion.answerB).css("background-color", "#aeb110")
@@ -126,10 +160,6 @@ const setBoard = (q) => {
         chooseAnswer(event, randomQuestion);    
     }); 
     
-   
-
-   
-        
 }
 
 
